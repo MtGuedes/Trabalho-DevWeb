@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Cor de fundo */
+        }
+        iframe {
+            width: 90vw;
+            height: 90vh;
+            border: none;
+        }
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #003366; /* Azul Marinho */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .logout-btn:hover {
+            background-color: #001a33; /* Azul Marinho mais escuro ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        title="Dashboard Projetos" 
+        src="https://app.powerbi.com/reportEmbed?reportId=c4f58134-80b2-43ae-8385-fb17632b0ab6&autoAuth=true&embeddedDemo=true" 
+        frameborder="0" 
+        allowFullScreen="true">
+    </iframe>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+
+    <script>
+        function logout() {
+            // Redireciona o usuário de volta para localhost:3000
+            window.location.href = "http://localhost:3000";
+        }
+    </script>
+</body>
+</html>

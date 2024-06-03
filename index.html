@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginDiv">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="loginUsuario">Usuário:</label>
+                <input type="text" id="loginUsuario" name="username" required>
+                <label for="loginSenha">Senha:</label>
+                <input type="password" id="loginSenha" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>            
+            <p><a href="#" id="showCadastro">Não possui cadastro? Cadastre-se aqui!</a></p>
+        </div>
+
+        <div id="cadastroDiv" class="escondido">
+            <h1>Cadastro</h1>
+            <form id="cadastroForm">
+                <label for="cadastroUsuario">Usuário:</label>
+                <input type="email" id="cadastroUsuario" name="username" required>
+                <label for="cadastroSenha">Senha:</label>
+                <input type="password" id="cadastroSenha" name="password" required>
+                <div id="passwordCriteria">
+                    <p id="length" class="invalid">Mínimo 8 caracteres</p>
+                    <p id="uppercase" class="invalid">Pelo menos 1 letra maiúscula</p>
+                    <p id="lowercase" class="invalid">Pelo menos 1 letra minúscula</p>
+                    <p id="number" class="invalid">Pelo menos 1 número</p>
+                    <p id="special" class="invalid">Pelo menos 1 caractere especial (@$!%*?&)</p>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p><a href="#" id="showLogin">Já possui cadastro? Faça login aqui!</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
